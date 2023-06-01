@@ -3,7 +3,7 @@ CUDA_VISIBLE_DEVICES=0 python train.py \
   --lr 0.05 \
   --workers 1 \
   --epochs 500 \
-  --batch-size 8 \
+  --batch-size 6 \
   --ratio 3 \
   --gpu-ids 0 \
   --checkname MCubeSNet \
@@ -13,6 +13,5 @@ CUDA_VISIBLE_DEVICES=0 python train.py \
   --list-folder list_folder \
   --use-pretrained-resnet \
   --is-multimodal \
-  --use-nir \
   --use-aolp \
   --use-dolp
