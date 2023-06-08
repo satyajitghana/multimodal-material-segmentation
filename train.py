@@ -237,6 +237,15 @@ class TrainerMultimodal(object):
                 'optimizer': self.optimizer.state_dict(),
                 'best_pred': self.best_pred,
             }, is_best)
+        else:
+            if epoch % 20 == 0:
+                is_best = False
+                self.saver.save_checkpoint({
+                    'epoch': epoch + 1,
+                    'state_dict': self.model.module.state_dict(),
+                    'optimizer': self.optimizer.state_dict(),
+                    'best_pred': self.best_pred,
+                }, is_best)
 
     def test(self, epoch):
         self.model.eval()

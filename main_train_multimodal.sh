@@ -1,8 +1,8 @@
 CUDA_VISIBLE_DEVICES=0 python train.py \
   --backbone resnet_adv\
-  --lr 0.05 \
-  --workers 1 \
-  --epochs 500 \
+  --lr 0.005 \
+  --workers 8 \
+  --epochs 1000 \
   --batch-size 6 \
   --ratio 3 \
   --gpu-ids 0 \
@@ -14,4 +14,5 @@ CUDA_VISIBLE_DEVICES=0 python train.py \
   --use-pretrained-resnet \
   --is-multimodal \
   --use-aolp \
-  --use-dolp
+  --use-dolp \
+  --resume /opt/data/satyajit/multimodal-material-segmentation/run/multimodal_dataset/MCubeSNet/checkpoint.pth.4jun.tar 
